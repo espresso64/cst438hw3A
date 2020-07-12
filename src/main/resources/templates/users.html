@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<title>CST438 Week 3 Demo</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Data</th>
+			<th>Sequence</th>
+		</tr>
+		<tr th:each="u : ${users}">
+			<td th:text="${u.name}"></td>
+			<td th:text="${u.data}"></td>
+			<td th:text="${u.sequence}"></td>
+		</tr>
+	</table>
+
+	<form action="/users" method="post">
+		Name: <input type="text" name="name" /> <br> 
+		Some data: <input type="text" name="data" /> <br> 
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>
