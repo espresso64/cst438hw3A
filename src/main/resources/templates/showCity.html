@@ -8,21 +8,49 @@
 <style>
 div {
   background-color: lightgrey;
-  width: 300px;
-  padding: 40px;
-  margin: 20px;
+  width: 600px;
+  padding: 25px;
+
 }
 </style>
 <div>
-	<h1><strong>City</strong></h1>
+	<h1><strong>Your Selected City</strong></h1>
 	ID: <span th:inline="text"> [[${cityInfo.id}]]</span><br/>
 	Name: <span th:inline="text"> [[${cityInfo.name}]]</span><br/>
 	Country Code: <span th:inline="text"> [[${cityInfo.countryCode}]]</span><br/>
 	Country Name: <span th:inline="text"> [[${cityInfo.countryName}]]</span><br/>
 	District: <span th:inline="text"> [[${cityInfo.district}]]</span><br/>
 	Population: <span th:inline="text"> [[${cityInfo.population}]]</span><br/>
-	Local Weather: <span th:inline="text"> [[${cityInfo.temp}]] F</span><br/>
+	Local Weather: <span th:inline="text"> [[${cityInfo.temp}]] &#176 F</span><br/>
 	Local Time: <span th:inline="text"> [[${cityInfo.time}]]</span><br/>
+	<br>
+	<br>
+	</div>
+	<!-- Referenced: https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
+	<!-- update template showcity.html file and add form and input tags to display 
+	choice for user to select one of 3 getaway packages along with entry field for 
+	an email id and the submit button. -->
+	Select your getaway package!</br></br>
+	
+  <input type="radio" id="luxury" name="level" value="luxury">
+  <label for="luxury">Luxury: Elite Premiere Gold </label></br>
+  
+  <input type="radio" id="moderate" name="level" value="moderate">
+  <label for="moderate">Moderate: Standard Silver</label></br>
+  
+  <input type="radio" id="budget" name="level" value="budget">
+	<label for="budget">Budget:Better-Than-Nothing Bronze</label></br></br>
+	
+<label for="email">Email: </label>
+  <input type="text" id="email" name="email"><br>
+  <br>
+	<input type="submit" value="Book Now!" />
+	
+	
 </div>
+
+</br>
+<br>
+
 </body>
 </html>
