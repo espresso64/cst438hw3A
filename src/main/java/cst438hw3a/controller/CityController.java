@@ -28,7 +28,7 @@ public class CityController {
 		} else {
 		//If city found, return queryResult HTML page
 			model.addAttribute("cityInfo", cityInfoPack);
-			return "queryResult";
+			return "showCity";
 	} 
 	}
 	
