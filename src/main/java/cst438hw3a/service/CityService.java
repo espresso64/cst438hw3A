@@ -1,4 +1,4 @@
-package cst438hw2.service;
+package cst438hw3a.service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.util.TimeZone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cst438hw2.domain.*;
+import cst438hw3a.domain.*;
 
 @Service
 public class CityService {

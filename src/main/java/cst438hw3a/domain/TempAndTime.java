@@ -1,4 +1,4 @@
-package cst438hw2.domain;
+package cst438hw3a.domain;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

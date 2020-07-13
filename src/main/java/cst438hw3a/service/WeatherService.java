@@ -1,4 +1,4 @@
-package cst438hw2.service;
+package cst438hw3a.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.JsonNode;
-import cst438hw2.domain.TempAndTime;
+
+import cst438hw3a.domain.TempAndTime;
 
 @Service
 public class WeatherService {

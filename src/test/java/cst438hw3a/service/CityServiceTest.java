@@ -1,4 +1,4 @@
-package cst438hw2.service;
+package cst438hw3a.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -15,9 +15,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import static org.mockito.ArgumentMatchers.anyString;
 
-import cst438hw2.domain.*;
+import cst438hw3a.domain.*;
+
+import static org.mockito.ArgumentMatchers.anyString;
 
 @SpringBootTest
 public class CityServiceTest {

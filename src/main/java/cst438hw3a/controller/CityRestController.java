@@ -1,4 +1,4 @@
-package cst438hw2.controller;
+package cst438hw3a.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import cst438hw2.domain.*;
-import cst438hw2.service.CityService;
+import cst438hw3a.domain.*;
+import cst438hw3a.service.CityService;
 
 @RestController
 public class CityRestController {

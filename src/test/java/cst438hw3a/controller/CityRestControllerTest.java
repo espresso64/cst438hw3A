@@ -1,6 +1,11 @@
-package cst438hw2.controller;
+package cst438hw3a.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import cst438hw3a.domain.*;
+import cst438hw3a.service.CityService;
+import cst438hw3a.service.WeatherService;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,10 +25,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 import java.util.ArrayList;
 import java.util.List;
-
-import cst438hw2.domain.*;
-import cst438hw2.service.CityService;
-import cst438hw2.service.WeatherService;
 
 import org.springframework.test.context.junit4.SpringRunner;
 
