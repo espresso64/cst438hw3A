@@ -15,8 +15,8 @@ div {
 </style>
 <div>
 	<h1><strong>Your Selected City</strong></h1>
-	ID: <span th:inline="text"> [[${cityInfo.id}]]</span><br/>
-	Name: <span th:inline="text"> [[${cityInfo.name}]]</span><br/>
+	ID: <span th:text="text"> [[${cityInfo.id}]]</span><br/>
+	Name: <span th:text="text"> [[${cityInfo.name}]]</span><br/>
 	Country Code: <span th:inline="text"> [[${cityInfo.countryCode}]]</span><br/>
 	Country Name: <span th:inline="text"> [[${cityInfo.countryName}]]</span><br/>
 	District: <span th:inline="text"> [[${cityInfo.district}]]</span><br/>
@@ -31,7 +31,7 @@ div {
 	choice for user to select one of 3 getaway packages along with entry field for 
 	an email id and the submit button. -->
 	Select your getaway package!</br></br>
-	
+<form method="post">
   <input type="radio" id="luxury" name="level" value="luxury">
   <label for="luxury">Luxury: Elite Premiere Gold </label></br>
   
@@ -41,10 +41,16 @@ div {
   <input type="radio" id="budget" name="level" value="budget">
 	<label for="budget">Budget:Better-Than-Nothing Bronze</label></br></br>
 	
+
 <label for="email">Email: </label>
   <input type="text" id="email" name="email"><br>
+  
+  <!-- Referenced: https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html -->
+  <!--Passes along the city info value -->
+  <input type="hidden" id="city" name="city" th:value="${cityInfo.name}">
   <br>
 	<input type="submit" value="Book Now!" />
+	</form>
 	
 	
 </div>
