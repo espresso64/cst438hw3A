@@ -51,7 +51,7 @@ div {
 				   https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
 				   
   <!--Passes along the city info value -->
-  <input type="hidden" id="city" name="city" th:value="*{cityInfo.name}">
+  <input type="hidden" id="city" name="city" th:value="${cityInfo.name}">
   <br>
 	<input type="submit" value="Book Now!" />
 	</form>
