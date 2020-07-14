@@ -27,11 +27,13 @@ div {
 	<br>
 	</div>
 	<!-- Referenced: https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
+	
 	<!-- update template showcity.html file and add form and input tags to display 
 	choice for user to select one of 3 getaway packages along with entry field for 
 	an email id and the submit button. -->
 	Select your getaway package!</br></br>
-<form method="post">
+	
+  <form method="post">
   <input type="radio" id="luxury" name="level" value="luxury">
   <label for="luxury">Luxury: Elite Premiere Gold </label></br>
   
@@ -39,13 +41,15 @@ div {
   <label for="moderate">Moderate: Standard Silver</label></br>
   
   <input type="radio" id="budget" name="level" value="budget">
-	<label for="budget">Budget:Better-Than-Nothing Bronze</label></br></br>
+	<label for="budget">Budget: Better-Than-Nothing Bronze</label></br></br>
 	
 
 <label for="email">Email: </label>
   <input type="text" id="email" name="email"><br>
   
-  <!-- Referenced: https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html -->
+  <!-- Referenced: https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html 
+				   https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
+				   
   <!--Passes along the city info value -->
   <input type="hidden" id="city" name="city" th:value="${cityInfo.name}">
   <br>
