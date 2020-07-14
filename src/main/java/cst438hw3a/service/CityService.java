@@ -23,26 +23,26 @@ public class CityService {
 
 	@Autowired
 	private WeatherService weatherService;
-	
-	 @Autowired
-	    private RabbitTemplate rabbitTemplate;
-		
-	    @Autowired
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+
+	@Autowired
 	private FanoutExchange fanout;
 	 
-	    public void requestReservation( 
-	                   String cityName, 
-	                   String level, 
-	                   String email) {
-			String msg  = "{\"cityName\": \""+ cityName + 
-	               "\" \"level\": \""+level+
-	               "\" \"email\": \""+email+"\"}" ;
-			System.out.println("Sending message:"+msg);
-			rabbitTemplate.convertSendAndReceive(
-	                fanout.getName(), 
-	                "",   // routing key none.
-	                msg);
-		}
+	public void requestReservation( 
+				   String cityName, 
+				   String level, 
+				   String email) {
+		String msg  = "{\"cityName\": \""+ cityName + 
+			   "\" \"level\": \""+level+
+			   "\" \"email\": \""+email+"\"}" ;
+		System.out.println("Sending message:"+msg);
+		rabbitTemplate.convertSendAndReceive(
+				fanout.getName(), 
+				"",   // routing key none.
+				msg);
+	}
 
 	
 
