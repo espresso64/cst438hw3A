@@ -41,7 +41,7 @@ div {
   <label for="moderate">Moderate: Standard Silver</label></br>
   
   <input type="radio" id="budget" name="level" value="budget">
-	<label for="budget">Budget: Better-Than-Nothing Bronze</label></br></br>
+  <label for="budget">Budget: Better-Than-Nothing Bronze</label></br></br>
 	
 
 <label for="email">Email: </label>
@@ -51,14 +51,12 @@ div {
 				   https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
 				   
   <!--Passes along the city info value -->
-  <input type="hidden" id="city" name="city" th:value="${cityInfo.name}">
+  <input type="hidden" id="city" name="city" th:value="*{cityInfo.name}">
   <br>
 	<input type="submit" value="Book Now!" />
 	</form>
 	
-	
 </div>
-
 </br>
 <br>
 
