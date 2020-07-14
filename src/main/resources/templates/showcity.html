@@ -15,8 +15,8 @@ div {
 </style>
 <div>
 	<h1><strong>Your Selected City</strong></h1>
-	ID: <span th:text="text"> [[${cityInfo.id}]]</span><br/>
-	Name: <span th:text="text"> [[${cityInfo.name}]]</span><br/>
+	ID: <span th:inline="text">[[${cityInfo.id}]]</span><br/>
+	Name: <span th:inline="text"> [[${cityInfo.name}]]</span><br/>
 	Country Code: <span th:inline="text"> [[${cityInfo.countryCode}]]</span><br/>
 	Country Name: <span th:inline="text"> [[${cityInfo.countryName}]]</span><br/>
 	District: <span th:inline="text"> [[${cityInfo.district}]]</span><br/>
@@ -25,7 +25,6 @@ div {
 	Local Time: <span th:inline="text"> [[${cityInfo.time}]]</span><br/>
 	<br>
 	<br>
-	</div>
 	<!-- Referenced: https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
 	
 	<!-- update template showcity.html file and add form and input tags to display 
@@ -51,7 +50,7 @@ div {
 				   https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
 				   
   <!--Passes along the city info value -->
-  <input type="hidden" id="city" name="city" th:value="${cityInfo.name}">
+  <input type="hidden" id="city" name="city" th:value="*{cityInfo.name}">
   <br>
 	<input type="submit" value="Book Now!" />
 	</form>
